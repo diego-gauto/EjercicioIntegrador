@@ -120,7 +120,7 @@ footer {
   margin-top: 2%;
   padding: 1% 0%;
   display: flex;
-  background-color: #1b4f72;
+  background: linear-gradient(to right, #12344b, #1b4f72);
   color: white;
   justify-content: space-around;
   align-items: center;
