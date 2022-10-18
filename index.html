@@ -10,7 +10,7 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <title>Ejercicio integrador</title>
   </head>
   <body>
@@ -62,7 +62,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="buy-tickets" href="#"
+                <a class="nav-link buy" id="buy-tickets" href="./tickets.html"
                   >Comprar tickets</a
                 >
               </li>
@@ -96,9 +96,11 @@
                 Quiero ser orador
               </button>
             </a>
-            <button type="button" class="btn btn-success">
-              Comprar tickets
-            </button>
+            <a href="./tickets.html">
+              <button type="button" class="btn btn-success buy">
+                Comprar tickets
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -177,7 +179,8 @@
       <div class="orador-title" id="conviertete">
         <p>
           CONVIÉRTETE EN UN<br /><span>ORADOR</span><br />Anótate como orador
-          para dar una charla ignite. Cuéntanos de qué quieres hablar!
+          para dar una <span id="ignite">charla ignite</span>. Cuéntanos de qué
+          quieres hablar!
         </p>
       </div>
       <form class="row g-2">
@@ -203,6 +206,93 @@
           Enviar
         </button>
       </form>
+      <div class="buy-tickets" id="tickets-div">
+        <div class="categories">
+          <div class="square student">
+            <div class="content">
+              <h5>Estudiante</h5>
+              <p>Tiene un descuento</p>
+              <h6><strong>80%</strong></h6>
+              <p class="doc">* presentar documentación</p>
+            </div>
+          </div>
+          <div class="square trainee">
+            <div class="content">
+              <h5>Trainee</h5>
+              <p>Tiene un descuento</p>
+              <h6><strong>50%</strong></h6>
+              <p class="doc">* presentar documentación</p>
+            </div>
+          </div>
+          <div class="square junior">
+            <div class="content">
+              <h5>Junior</h5>
+              <p>Tiene un descuento</p>
+              <h6><strong>15%</strong></h6>
+              <p class="doc">* presentar documentación</p>
+            </div>
+          </div>
+        </div>
+        <div class="price">
+          <p>VENTA</p>
+          <h2>VALOR DEL TICKET $200</h2>
+        </div>
+        <form class="row g-2" id="tickets-form">
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nombre"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Apellido"
+              required
+            />
+          </div>
+          <div class="col-md-12">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Correo"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input
+              type="number"
+              id="cantidad"
+              class="form-control"
+              placeholder="Cantidad"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="categories" class="form-label">Categorías</label>
+            <select id="categories" class="form-select">
+              <option>Estudiante</option>
+              <option>Trainee</option>
+              <option>Junior</option>
+            </select>
+          </div>
+          <div class="resume">
+            Total a pagar: $ <span id="total">00.00</span>
+          </div>
+          <div class="botones">
+            <button type="reset" id="btn-reset" class="btn btn-success col-6">
+              Borrar
+            </button>
+            <button type="submit" id="btn-resume" class="btn btn-success col-6">
+              Resumen
+            </button>
+          </div>
+        </form>
+      </div>
     </main>
     <footer>
       <div class="footer-left">
@@ -231,5 +321,6 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
